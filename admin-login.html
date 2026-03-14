@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Harmony Climate — Адміністратор</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    .login-box {
+      background: #101010;
+      border: 2px solid #c9a24d;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .login-logo {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 48px;
+    }
+
+    .login-box h2 {
+      color: #c9a24d;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .login-subtitle {
+      text-align: center;
+      color: #9a9a9a;
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      color: #ededed;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .form-group input {
+      padding: 12px 15px;
+      background: #151515;
+      border: 1px solid #262626;
+      border-radius: 8px;
+      color: #ededed;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #c9a24d;
+      box-shadow: 0 0 10px rgba(201, 162, 77, 0.2);
+    }
+
+    .form-group input::placeholder {
+      color: #505050;
+    }
+
+    .login-btn {
+      padding: 12px;
+      background: #c9a24d;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      transition: opacity 0.2s ease;
+      margin-top: 10px;
+    }
+
+    .login-btn:hover {
+      opacity: 0.9;
+    }
+
+    .error-message {
+      color: #ff6b6b;
+      text-align: center;
+      font-size: 13px;
+      padding: 12px;
+      background: rgba(255, 107, 107, 0.1);
+      border-radius: 6px;
+      border: 1px solid #ff6b6b;
+      display: none;
+      margin-bottom: 10px;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    .login-info {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #262626;
+      font-size: 12px;
+      color: #9a9a9a;
+      line-height: 1.6;
+    }
+
+    .demo-credentials {
+      background: #151515;
+      border: 1px solid #262626;
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 12px;
+      font-size: 12px;
+    }
+
+    .demo-label {
+      color: #c9a24d;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .demo-item {
+      color: #ededed;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="login-logo">🔐</div>
+      <h2>HARMONY CLIMATE</h2>
+      <p class="login-subtitle">Панель адміністратора</p>
+
+      <div class="error-message" id="errorMessage"></div>
+
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="username">Логін</label>
+          <input type="text" id="username" placeholder="admin" autocomplete="username">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" placeholder="••••••••" autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="login-btn">🔓 Увійти</button>
+      </form>
+
+      <div class="login-info">
+        <div class="demo-label">📋 Тестові облікові дані:</div>
+        <div class="demo-credentials">
+          <div class="demo-item">📧 Логін: <strong>admin</strong></div>
+          <div class="demo-item">🔑 Пароль: <strong>admin123</strong></div>
+          <hr style="border: none; border-top: 1px solid #262626; margin: 8px 0;">
+          <div class="demo-item">📧 Логін: <strong>harmony</strong></div>
+          <div class="demo-item">🔑 Пароль: <strong>climate2024</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Перевірка якщо вже залогінені
+    if (localStorage.getItem('adminLoggedIn') === 'true') {
+      window.location.href = 'admin-dashboard.html';
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const errorDiv = document.getElementById('errorMessage');
+
+      // Прості облікові дані для тестування
+      const validUsers = {
+        'admin': 'admin123',
+        'harmony': 'climate2024'
+      };
+
+      if (validUsers[username] === password) {
+        localStorage.setItem('adminLoggedIn', 'true');
+        localStorage.setItem('adminLoginTime', new Date().getTime());
+        localStorage.setItem('adminUsername', username);
+        
+        errorDiv.classList.remove('show');
+        window.location.href = 'admin-dashboard.html';
+      } else {
+        errorDiv.classList.add('show');
+        errorDiv.textContent = '❌ Невірні облікові дані. Перевірте логін та пароль.';
+        document.getElementById('password').value = '';
+        document.getElementById('username').focus();
+      }
+    });
+  </script>
+</body>
+</html>
