@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Каталог кондиціонерів — Harmony Climate | Купити</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Каталог кондиціонерів: оригінальні моделі, фільтри по площі, WiFi контроль. Порівняння товарів, доставка по Україні.">
+  <meta name="keywords" content="каталог кондиціонерів, купити кондиціонер, типи кондиціонерів, WiFi кондиціонери, інверторні кондиціонери">
+  <meta property="og:image" content="логотип Harmony Climate.png">
+  <link rel="canonical" href="https://harmony-climate.com/catalog.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+<aside class="sidebar">
+  <img src="логотип Harmony Climate.png" alt="Harmony Climate" class="sidebar-logo">
+
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="catalog.html" class="active">Каталог</a>
+    <a href="services.html">Послуги</a>
+    <a href="cart.html" class="cart-link">
+      Кошик <span id="cartBadge" class="cart-badge">0</span>
+    </a>
+    <a href="checkout.html">Оформлення</a>
+  </nav>
+
+  <div class="admin-link">
+    <a href="admin/admin-login.html">⚙️ Адміністрація</a>
+  </div>
+</aside>
+
+
+<main class="main">
+
+   <!-- BREADCRUMBS -->
+  <nav class="breadcrumbs" aria-label="breadcrumb">
+    <a href="index.html">Головна</a>
+    <span>/</span>
+    <span class="current">Каталог</span>
+  </nav>
+
+  <section class="catalog-header">
+    <h2>Каталог кондиціонерів</h2>
+    <p class="muted">Підібрані рішення під реальні задачі</p>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="search-section">
+    <input 
+      type="text" 
+      id="searchInput" 
+      class="search-input"
+      placeholder="🔍 Пошук по назві, марці... Daikin, LG, Samsung"
+      autocomplete="off"
+    >
+    <button id="searchBtn" class="search-btn">Шукати</button>
+    <button id="clearSearch" class="clear-search-btn hidden">Очистити</button>
+  </section>
+
+ 
+  <!-- FILTERS -->
+  <section class="filters">
+    <select id="filter-area">
+      <option value="">Площа (м²)</option>
+      <option value="25">до 25</option>
+      <option value="40">до 40</option>
+      <option value="50">50+</option>
+    </select>
+
+    <select id="filter-wifi">
+      <option value="">Wi-Fi</option>
+      <option value="yes">Так</option>
+      <option value="no">Ні</option>
+    </select>
+
+    <select id="filter-color">
+      <option value="">Колір</option>
+      <option value="white">Білий</option>
+      <option value="black">Чорний</option>
+      <option value="gray">Сірий</option>
+    </select>
+
+    <select id="filter-price">
+      <option value="">Ціна</option>
+      <option value="10000">до 10 000</option>
+      <option value="20000">10 000 – 20 000</option>
+      <option value="30000">20 000 – 30 000</option>
+      <option value="50000">30 000+</option>
+    </select>
+  </section>
+
+  
+
+  
+<!-- PRODUCTS -->
+  <section id="productGrid" class="product-grid"></section>
+
+  <!-- CONTACT -->
+  <section class="contact-info">
+    <h3>Контактна інформація</h3>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h4>📞 Телефон</h4>
+        <p><a href="tel:+380412123456">+38 (0412) 12-34-56</a></p>
+        <p class="small">пн-пт 09:00 – 18:00</p>
+      </div>
+
+      <div class="contact-item">
+        <h4>✉️ Email</h4>
+        <p><a href="mailto:info@harmonyclimate.zt.ua">info@harmonyclimate.zt.ua</a></p>
+        <p class="small">Відповідь протягом 2 годин</p>
+      </div>
+
+      <div class="contact-item">
+        <h4>📍 Адреса</h4>
+        <p>вул. Київська, 15</p>
+        <p class="small">Житомир 10001, Україна</p>
+      </div>
+
+      <div class="contact-item">
+        <h4>🕐 Режим роботи</h4>
+        <p>Пн-Пт: 09:00 – 18:00</p>
+        <p class="small">Сб-Нд: 10:00 – 16:00</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+<!-- MODAL -->
+<div id="productModal" class="modal hidden" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <button class="close-modal" aria-label="Закрити">&times;</button>
+
+    <div class="modal-body">
+      <div class="modal-image-section">
+        <img id="modalImage" src="" alt="Товар" class="modal-image">
+        <div id="modalBadges" class="modal-badges"></div>
+      </div>
+
+      <div class="modal-info">
+        <div class="modal-top">
+          <h2 id="modalName"></h2>
+          <button id="wishlistBtn" class="wishlist-btn">♡</button>
+        </div>
+
+        <div id="modalRating" class="modal-rating"></div>
+        <p id="modalDescription" class="modal-description"></p>
+
+        <div class="modal-specs">
+          <div class="spec-item"><span class="spec-label">Площа:</span><span id="modalArea"></span></div>
+          <div class="spec-item"><span class="spec-label">Wi-Fi:</span><span id="modalWifi"></span></div>
+          <div class="spec-item"><span class="spec-label">Колір:</span><span id="modalColor"></span></div>
+          <div class="spec-item"><span class="spec-label">Енергоспоживання:</span><span id="modalPower"></span></div>
+          <div class="spec-item"><span class="spec-label">Рівень шуму:</span><span id="modalNoise"></span></div>
+          <div class="spec-item"><span class="spec-label">Гарантія:</span><span id="modalWarranty"></span></div>
+          <div class="spec-item"><span class="spec-label">Доставка:</span><span id="modalDelivery"></span></div>
+        </div>
+
+        <div id="modalStatus" class="modal-status"></div>
+        <div id="productReviews"></div>
+
+        <div class="modal-price">
+          <span class="price-label">Ціна:</span>
+          <span id="modalPrice" class="price-value"></span>
+        </div>
+
+        <button id="addToCartBtn" class="add-to-cart-btn">Додати в кошик</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/data.js" defer></script>
+<script src="js/catalog.js" defer></script>
+<script src="js/features.js" defer></script>
+
+
+</body>
+</html>

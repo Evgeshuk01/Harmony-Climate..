@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="логотип Harmony Climate.png">
+  <title>Harmony Climate — Оформлення замовлення</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+
+<aside class="sidebar">
+  <img src="логотип Harmony Climate.png" alt="Harmony Climate" class="sidebar-logo">
+  <a href="index.html">Головна</a>
+  <a href="catalog.html">Каталог</a>
+  <a href="services.html">Послуги</a>
+  <a href="cart.html">
+    Кошик <span id="cartBadge" class="cart-badge">0</span>
+  </a>
+  <a href="checkout.html" class="active">Оформлення</a>
+  <a href="admin/admin-login.html" style="border-top: 1px solid var(--border); margin-top: 20px; padding-top: 20px; color: var(--gold); font-weight: 600;">⚙️ Адміністрація</a>
+</aside>
+
+<main class="main">
+  <!-- BREADCRUMBS -->
+  <nav class="breadcrumbs">
+    <a href="index.html">Головна</a>
+    <span>/</span>
+    <a href="catalog.html">Каталог</a>
+    <span>/</span>
+    <a href="cart.html">Кошик</a>
+    <span>/</span>
+    <span class="current">Оформлення</span>
+  </nav>
+
+  <section class="catalog-header">
+    <h2>🛒 Оформлення замовлення</h2>
+    <p class="muted">Завершіть ваше замовлення в кілька простих кроків</p>
+  </section>
+
+  <!-- PROGRESS INDICATOR -->
+  <div class="checkout-progress" id="checkoutProgress">
+    <div class="progress-step active" data-step="1">1</div>
+    <div class="progress-step" data-step="2">2</div>
+    <div class="progress-step" data-step="3">3</div>
+    <div class="progress-step" data-step="4">4</div>
+    <div class="progress-step" data-step="5">5</div>
+  </div>
+
+  <div class="checkout-container">
+    <!-- LEFT: FORM -->
+    <section class="checkout-form">
+      <form id="checkoutForm">
+        <!-- STEP 1: CONTACT INFO -->
+        <div class="form-section" data-step="1">
+          <h3>👤 Контактна інформація</h3>
+          <div class="form-row">
+            <div class="field-group">
+              <input type="text" id="firstName" placeholder="Ім'я" required>
+              <span class="error-message" id="firstNameError"></span>
+            </div>
+            <div class="field-group">
+              <input type="text" id="lastName" placeholder="Прізвище" required>
+              <span class="error-message" id="lastNameError"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field-group">
+              <input type="email" id="email" placeholder="Email" required>
+              <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="field-group">
+              <input type="tel" id="phone" placeholder="+380 XX XXX XX XX" required>
+              <span class="error-message" id="phoneError"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: DELIVERY -->
+        <div class="form-section" data-step="2">
+          <h3>🚚 Спосіб доставки</h3>
+          <p class="muted" style="margin-bottom: 15px; font-size: 0.9rem;">Доставка здійснюється по місту Житомир та Житомирській області</p>
+          <div id="deliveryOptions" class="delivery-options"></div>
+        </div>
+
+        <!-- STEP 3: ADDRESS -->
+        <div class="form-section" data-step="3">
+          <h3>📍 Адреса доставки</h3>
+          <div class="form-row">
+            <div class="field-group">
+              <select id="city" required>
+                <option value="">Оберіть місто</option>
+                <option value="Житомир">Житомир</option>
+                <option value="Бердичів">Бердичів</option>
+                <option value="Коростень">Коростень</option>
+                <option value="Новоград-Волинський">Новоград-Волинський</option>
+                <option value="Малин">Малин</option>
+                <option value="Радомишль">Радомишль</option>
+                <option value="Чуднів">Чуднів</option>
+                <option value="Любар">Любар</option>
+                <option value="Інше">Інше місто області</option>
+              </select>
+              <span class="error-message" id="cityError"></span>
+            </div>
+            <div class="field-group">
+              <input type="text" id="street" placeholder="Вулиця" required>
+              <span class="error-message" id="streetError"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field-group">
+              <input type="text" id="building" placeholder="Будинок/квартира" required>
+              <span class="error-message" id="buildingError"></span>
+            </div>
+            <div class="field-group">
+              <input type="text" id="apartment" placeholder="Під'їзд/поверх (опціонально)">
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: PAYMENT METHOD -->
+        <div class="form-section" data-step="4">
+          <h3>💳 Спосіб оплати</h3>
+          <div id="paymentOptions" class="payment-options"></div>
+        </div>
+
+        <!-- STEP 5: ADDITIONAL INFO -->
+        <div class="form-section" data-step="5">
+          <h3>📝 Додатково</h3>
+          <label class="checkbox">
+            <input type="checkbox" id="insurance">
+            <span>🛡️ Страховка замовлення (+50 ₴) - захист від пошкоджень під час транспортування</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="giftWrap">
+            <span>🎁 Подарункове упакування (+30 ₴) - святкове оформлення товару</span>
+          </label>
+          <textarea id="notes" placeholder="Примітка до замовлення (опціонально). Наприклад: зручний час доставки, особливі побажання тощо." rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn-complete-order" id="submitBtn">
+          ✅ Підтвердити замовлення
+        </button>
+      </form>
+    </section>
+
+    <!-- RIGHT: SUMMARY -->
+    <section class="order-summary">
+      <h3>📋 Резюме замовлення</h3>
+
+      <div id="summaryItems" class="summary-items"></div>
+
+      <div class="summary-divider"></div>
+
+      <div class="summary-row">
+        <span>Сума товарів:</span>
+        <span id="summarySubtotal">0 ₴</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Доставка:</span>
+        <span id="summaryDelivery">Безкоштовно</span>
+      </div>
+
+      <div id="insuranceRow" class="summary-row" style="display: none;">
+        <span>Страховка:</span>
+        <span>+50 ₴</span>
+      </div>
+
+      <div id="giftRow" class="summary-row" style="display: none;">
+        <span>Упакування:</span>
+        <span>+30 ₴</span>
+      </div>
+
+      <div class="summary-divider"></div>
+
+      <div class="summary-row total">
+        <span>Всього:</span>
+        <span id="summaryTotal">0 ₴</span>
+      </div>
+
+      <!-- SECURITY INFO -->
+      <div class="security-info">
+        <p>🔒 Ваші дані захищені 256-bit SSL шифруванням</p>
+        <p>✓ Гарантія якості на усі товари</p>
+        <p>📞 Підтримка клієнтів 24/7</p>
+        <p>🔄 Безкоштовне повернення протягом 14 днів</p>
+      </div>
+
+      <!-- TRUST INDICATORS -->
+      <div class="trust-section">
+        <h4>🛡️ Чому обирають нас</h4>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-icon">🚚</span>
+            <span>Швидка доставка</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✅</span>
+            <span>Офіційна гарантія</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🔧</span>
+            <span>Професійне встановлення</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">💯</span>
+            <span>100% якість</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="логотип Harmony Climate.png">
+  <title>Harmony Climate — Кошик</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+<body>
+
+<aside class="sidebar">
+  <img src="логотип Harmony Climate.png" alt="Harmony Climate" class="sidebar-logo">
+  <a href="index.html">Головна</a>
+  <a href="catalog.html">Каталог</a>
+  <a href="services.html">Послуги</a>
+  <a href="cart.html" class="active">
+    Кошик <span id="cartBadge" class="cart-badge">0</span>
+  </a>
+  <a href="checkout.html">Оформлення</a>
+  <a href="admin/admin-login.html" style="border-top: 1px solid var(--border); margin-top: 20px; padding-top: 20px; color: var(--gold); font-weight: 600;">⚙️ Адміністрація</a>
+</aside>
+
+<main class="main">
+  <!-- BREADCRUMBS -->
+  <nav class="breadcrumbs">
+    <a href="index.html">Головна</a>
+    <span>/</span>
+    <a href="catalog.html">Каталог</a>
+    <span>/</span>
+    <span class="current">Кошик</span>
+  </nav>
+
+  <section class="catalog-header">
+    <h2>🛒 Кошик покупок</h2>
+    <p class="muted">Переглядайте і керуйте своїми товарами</p>
+  </section>
+
+  <!-- EMPTY CART MESSAGE -->
+  <div id="emptyCart" class="empty-cart">
+    <h3>Ваш кошик порожній</h3>
+    <p>Додайте товари до кошика, щоб оформити замовлення</p>
+    <a href="catalog.html" class="hero-btn">Перейти до каталогу</a>
+  </div>
+
+  <!-- CART TOOLBAR -->
+  <div id="cartToolbar" class="cart-toolbar" style="display: none;">
+    <div class="sort-options">
+      <label for="sortSelect">Сортувати:</label>
+      <select id="sortSelect">
+        <option value="newest">За датою додавання</option>
+        <option value="price-low">За ціною (зростання)</option>
+        <option value="price-high">За ціною (спадання)</option>
+        <option value="name">За назвою</option>
+      </select>
+    </div>
+    <button id="clearCartBtn" class="btn-clear">🗑️ Очистити кошик</button>
+  </div>
+
+  <!-- CART ITEMS -->
+  <div class="cart-items-container">
+    <div id="cartItems" class="cart-items"></div>
+  </div>
+
+  <!-- CART BOTTOM LAYOUT -->
+  <div id="cartBottom" class="cart-bottom" style="display: none;">
+    <!-- LEFT: RECOMMENDATIONS -->
+    <section class="recommendations-section">
+      <h3>🎁 Рекомендуємо також</h3>
+      <div id="recommendationsGrid" class="recommendations-grid">
+        <!-- Recommendations will be loaded here -->
+      </div>
+    </section>
+
+    <!-- RIGHT: SUMMARY & CHECKOUT -->
+    <section class="cart-summary">
+      <h3>💳 Резюме замовлення</h3>
+
+      <!-- DELIVERY INFO -->
+      <div class="delivery-info">
+        <p class="muted">🚚 Безкоштовна доставка від <strong>3000 ₴</strong></p>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="delivery-status">Залишилось 3000 ₴ до безкоштовної доставки</p>
+      </div>
+
+      <!-- COUPON SECTION -->
+      <div class="coupon-section">
+        <h4>🎫 Купон на знижку</h4>
+        <div class="coupon-input-group">
+          <input type="text" id="couponInput" class="coupon-input" placeholder="Введіть код купона" maxlength="10">
+          <button id="applyCouponBtn" class="coupon-btn">Застосувати</button>
+        </div>
+        <div id="couponMessage" class="coupon-message"></div>
+      </div>
+
+      <!-- SUMMARY ROWS -->
+      <div class="summary-row">
+        <span>Сума товарів:</span>
+        <span id="subtotal">0 ₴</span>
+      </div>
+
+      <div id="discountRow" class="summary-row" style="display: none;">
+        <span>Знижка:</span>
+        <span id="discount">0 ₴</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Доставка:</span>
+        <span>Безкоштовно</span>
+      </div>
+
+      <div class="summary-row total">
+        <span>Всього:</span>
+        <span id="total">0 ₴</span>
+      </div>
+
+      <!-- QUICK CHECKOUT FORM -->
+      <form id="quickCheckoutForm" class="quick-checkout-form">
+        <h4>🚀 Швидке оформлення</h4>
+
+        <div class="form-group">
+          <input type="text" id="checkoutName" placeholder="Ваше ім'я" required>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" id="checkoutPhone" placeholder="+380 XX XXX XX XX" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="checkoutAddress" placeholder="Адреса доставки (Житомир та область)" required>
+        </div>
+
+        <button type="submit" id="quickCheckoutBtn" class="btn-checkout">
+          ⚡ Оформити замовлення
+        </button>
+      </form>
+
+      <a href="catalog.html" class="btn-continue">⬅️ Продовжити покупки</a>
+
+      <!-- TRUST INDICATORS -->
+      <div class="trust-indicators">
+        <h4>🛡️ Чому обирають нас</h4>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-icon">🔒</span>
+            <span>Безпечна оплата</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🚚</span>
+            <span>Швидка доставка</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✅</span>
+            <span>Гарантія якості</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">📞</span>
+            <span>Підтримка 24/7</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Harmony Climate — Кондиціонери та монтаж | Професійний сервіс</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Гарантійні кондиціонери для дому та бізнесу. Професійний монтаж, доставка по Україні, 24/7 підтримка. ✓ Оригінальні моделі від Daikin, LG, Samsung.">
+  <meta name="keywords" content="кондиціонери, купити кондиціонер, монтаж кондиціонера, Daikin, LG, Samsung, Україна, доставка">
+  <meta name="author" content="Harmony Climate">
+  <meta property="og:title" content="Harmony Climate — Кондиціонери та монтаж">
+  <meta property="og:description" content="Гарантійні кондиціонери для дому та бізнесу. Професійний монтаж, доставка по Україні.">
+  <meta property="og:image" content="логотип Harmony Climate.png">
+  <meta property="og:url" content="https://harmony-climate.com">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://harmony-climate.com">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <!-- MOBILE HEADER (visible on small screens) -->
+  <div class="mobile-header">
+    <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Відкрити меню">☰</button>
+    <a href="index.html" class="mobile-brand">Harmony Climate</a>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <img src="логотип Harmony Climate.png" alt="Harmony Climate" class="sidebar-logo">
+    <a href="index.html" class="active">Головна</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="services.html">Послуги</a>
+    <a href="cart.html">Кошик <span id="cartBadge" class="cart-badge">0</span></a>
+    <a href="checkout.html">Оформлення</a>
+    <a href="admin/admin-login.html" style="border-top: 1px solid var(--border); margin-top: 20px; padding-top: 20px; color: var(--gold); font-weight: 600;">⚙️ Адміністрація</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h2>Кондиціонери для дому та бізнесу</h2>
+      <p>
+        Професійний монтаж • Офіційна гарантія • Доставка по Житомирській області
+      </p>
+      <a href="catalog.html" class="hero-btn">Перейти в каталог</a>
+    </section>
+
+    <!-- LOGO SECTION -->
+    <section class="logo-section">
+      <img src="логотип Harmony Climate.png" alt="Логотип Harmony Climate" class="brand-logo">
+    </section>
+
+    <!-- GALLERY/SLIDER -->
+    <section class="gallery">
+      <h3>Реальні встановлення</h3>
+      <p class="muted">Наші роботи в житті клієнтів</p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="вітальня з кондиціонером.png" alt="Вітальня з кондиціонером">
+          <p>🏠 Вітальня приватного будинку</p>
+        </div>
+        <div class="gallery-item">
+          <img src="термостат.png" alt="Термостат системи кондиціонування">
+          <p>🏢 Офіс з мульти-системою</p>
+        </div>
+        <div class="gallery-item">
+          <img src="монтаж скритої системи.png" alt="Монтаж скритої системи">
+          <p>🏠 Квартира зі скритою установкою</p>
+        </div>
+        <div class="gallery-item">
+          <img src="торговий центр.png" alt="Торгово-розважальний центр">
+          <p>🛍️ Торгово-розважальний центр</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR PRODUCTS -->
+    <section class="popular-products">
+      <h3>🔥 Популярні товари</h3>
+      <p class="muted">Бестселери цього місяця</p>
+      <div class="products-grid" id="popularProducts">
+        <!-- Генерується JavaScript -->
+      </div>
+    </section>
+
+    <!-- TRUST NUMBERS -->
+    <section class="stats">
+      <div class="stat">
+        <strong>8+</strong>
+        <span>років досвіду</span>
+      </div>
+      <div class="stat">
+        <strong>1200+</strong>
+        <span>встановлених систем</span>
+      </div>
+      <div class="stat">
+        <strong>98%</strong>
+        <span>задоволених клієнтів</span>
+      </div>
+      <div class="stat">
+        <strong>⭐ 4.9/5</strong>
+        <span>рейтинг на Гугл</span>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+      <div class="benefit">
+        <h3>✓ Підбір під приміщення</h3>
+        <p>Розрахунок потужності, типу системи та енергоефективності.</p>
+      </div>
+      <div class="benefit">
+        <h3>✓ Монтаж під ключ</h3>
+        <p>Без пилу, без пошкоджень, з дотриманням технічних норм.</p>
+      </div>
+      <div class="benefit">
+        <h3>✓ Офіційна гарантія</h3>
+        <p>На обладнання та виконані роботи — до 7 років.</p>
+      </div>
+      <div class="benefit">
+        <h3>✓ Чесна ціна</h3>
+        <p>Без прихованих платежів та “дрібного шрифту”.</p>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="trust">
+      <h3>Чому Harmony Climate?</h3>
+      <p>
+        Ми не універсальний магазин техніки.  
+        Ми спеціалізуємось виключно на кліматичних системах.
+        Це означає точний підбір, правильний монтаж і довгий ресурс обладнання.
+      </p>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="certifications">
+      <h3>🏅 Сертифікація та партнерства</h3>
+      <div class="certs-grid">
+        <div class="cert-badge">🏆 ISO 9001</div>
+        <div class="cert-badge">🌍 Партнер DAIKIN</div>
+        <div class="cert-badge">🔧 Сертифікований сервіс</div>
+        <div class="cert-badge">✅ Ліцензований в Україні</div>
+      </div>
+    </section>
+
+    <!-- COVERAGE MAP -->
+    <section class="coverage">
+      <h3>📍 Географія обслуговування</h3>
+    <p class="muted">Ми працюємо по Житомиру та Житомирській області з можливістю доставки</p>
+    <div class="cities-list">
+      <span class="city-badge">Житомир</span>
+      <span class="city-badge">Бердичів</span>
+      <span class="city-badge">Коростень</span>
+      <span class="city-badge">Новоград-Волинський</span>
+      <span class="city-badge">Малин</span>
+      <span class="city-badge">Радомишль</span>
+      <span class="city-badge">Чуднів</span>
+      <span class="city-badge">Любар</span>
+      <span class="city-badge">Олевськ</span>
+      <span class="city-badge">Попільня</span>
+      <span class="city-badge">+інші міста області</span>
+    </div>
+    <p class="muted" style="font-size: 12px; margin-top: 15px;">* Доставка по області — безплатна від 3000 грн</p>
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <h3>⭐ Відгуки наших клієнтів</h3>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Відмінна робота! Встановили кондиціонер в спальню. Монтажники приїхали вчасно, все зробили акуратно і професійно. Система працює тихо, кімната охолоджується швидко."</p>
+          <strong>Олена С.</strong>
+          <span class="muted">Житомир, 3 тижні тому</span>
+        </div>
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Дуже задоволений сервісом. Підібрали оптимальну модель для мого офісу. Ціна приємно здивувала - чесна і без прихованих платежів. Рекомендую всім!"</p>
+          <strong>Андрій М.</strong>
+          <span class="muted">Бердичів, 1 місяць тому</span>
+        </div>
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Третій рік поспіль звертаюся до Harmony Climate. Завжди все на найвищому рівні: консультація, доставка, монтаж. Цього разу встановили мульти-систему в будинку."</p>
+          <strong>Вікторія К.</strong>
+          <span class="muted">Коростень, 2 місяці тому</span>
+        </div>
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Швидко відреагували на заявку. Технік приїхав наступного дня, діагностував проблему і все polагодив. Сервіс на рівні європейських стандартів."</p>
+          <strong>Максим П.</strong>
+          <span class="muted">Новоград-Волинський, 1 тиждень тому</span>
+        </div>
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Купили кондиціонер для дитячої кімнати. Діти сплять чудово - система працює майже безшумно. Дякую за професійний підхід до вибору моделі."</p>
+          <strong>Тетяна В.</strong>
+          <span class="muted">Малин, 2 тижні тому</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section class="how-we-work">
+      <h3>🎯 Як ми працюємо</h3>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Консультація</h4>
+          <p>Вибір товару та обговорення параметрів встановлення з фахівцем</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Замовлення</h4>
+          <p>Оформлення замовлення в кошику з вибором доставки та сервісу</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Доставка</h4>
+          <p>Швидка доставка по Україні (1-3 дні) з трекингом замовлення</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h4>Монтаж</h4>
+          <p>Професійний монтаж сертифікованими техніками за день</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h4>Гарантія</h4>
+          <p>Гарантія на роботи та обладнання з цілодобовою підтримкою</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="comparison-section">
+      <h3>📊 Чому ми краще за інших</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>Harmony Climate</th>
+            <th>Конкурент A</th>
+            <th>Конкурент B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Гарантія</td>
+            <td>✓ 2-7 років</td>
+            <td>✗ 1 рік</td>
+            <td>✓ 2 років</td>
+          </tr>
+          <tr>
+            <td>Техдопомога</td>
+            <td>✓ 24/7</td>
+            <td>✗ Робочі дні</td>
+            <td>✓ 9-20</td>
+          </tr>
+          <tr>
+            <td>Монтаж під ключ</td>
+            <td>✓ Одного дня</td>
+            <td>✓ 3 дні</td>
+            <td>✗ Вишукується</td>
+          </tr>
+          <tr>
+            <td>Доставка</td>
+            <td>✓ Безплатна від 3000грн</td>
+            <td>✗ Платна</td>
+            <td>✓ Платна</td>
+          </tr>
+          <tr>
+            <td>Спеціалісти</td>
+            <td>✓ Сертифіковані</td>
+            <td>✓ Досвідчені</td>
+            <td>✗ Універсали</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h3>❓ Часті питання (FAQ)</h3>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Яка гарантія на кондиціонери?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Стандартна гарантія 2-3 роки на обладнання в залежності від моделі. На монтажні роботи гарантія 1 рік. Можна розширити до 5 років за додаткову плату.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Скільки часу займає монтаж?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Монтаж однієї одиниці займає 2-4 години в залежності від складності. Можливо встановлення в день замовлення в межах міста Київ та інші укупні міста.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Які способи доставки доступні?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Ми пропонуємо: Самовивіз зі складу (безплатно), Нова пошта (2-3 дні, 80 грн), Укрпошта (3-5 днів, 60 грн), наша служба доставки по Київу.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Чи потрібна спеціальна підготовка до монтажу?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Потрібно забезпечити вільний доступ до місця монтажу внутрішнього та зовнішнього блоків. Переклади та прибирання вам не потрібні.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Як оплачувати замовлення?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Прийнімаємо готівку при отриманні, банківський переказ, карти VISA/Mastercard через LiqPay, Приватбанк. Розстрочка доступна на суми від 3000 грн.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Чи є послуга обслуговування кондиціонера?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Так, ми пропонуємо сервісні контракти: чищення, технічне обслуговування, швидкий ремонт. Можна укласти контракт на 1-5 років.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+      <h3>📖 Блог — корисні статті</h3>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-image">❓</div>
+          <div class="blog-content">
+            <h4>Як вибрати кондиціонер?</h4>
+            <p>Поради по вибору потужності, типу системи та енергоефективності для вашого приміщення.</p>
+            <span class="blog-date">15 березня 2026</span><br>
+            <a href="#" class="blog-read-more">Читати далі →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image">🔧</div>
+          <div class="blog-content">
+            <h4>Частих помилок монтажу</h4>
+            <p>Топ помилок при встановленні кондиціонера та як їх уникнути для довшої служби.</p>
+            <span class="blog-date">12 березня 2026</span><br>
+            <a href="#" class="blog-read-more">Читати далі →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image">⚡</div>
+          <div class="blog-content">
+            <h4>Економія енергії</h4>
+            <p>10 способів зменшити витрату електроенергії на охолодження помещения на 40%.</p>
+            <span class="blog-date">10 березня 2026</span><br>
+            <a href="#" class="blog-read-more">Читати далі →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+      <h3>📧 Підпишіться на новини</h3>
+      <p>Отримуйте спеціальні пропозиції, поради та новини про кондиціонери</p>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Ваша пошта">
+        <button type="button" class="newsletter-btn">Підписатися</button>
+      </form>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="services-preview">
+      <h3>Наші послуги</h3>
+      <ul>
+        <li>✓ Продаж кондиціонерів з гарантією</li>
+        <li>✓ Монтаж побутових і комерційних систем</li>
+        <li>✓ Демонтаж старого обладнання та утилізація</li>
+        <li>✓ Сервісне обслуговування та чистка</li>
+        <li>✓ Цілодобова технічна підтримка 24/7</li>
+        <li>✓ Контрактний сервіс та розширена гарантія</li>
+      </ul>
+      <a href="services.html" class="hero-btn" style="margin-top: 20px;">Переглянути всі послуги</a>
+    </section>
+
+    <!-- CONTACT INFO -->
+    <section class="contact-info">
+      <h3>📞 Контактна інформація</h3>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h4>☎️ Телефон</h4>
+          <p>+38 (0412) 12-34-56</p>
+          <p>+38 (095) 123-45-67</p>
+        </div>
+        <div class="contact-card">
+          <h4>📧 Email</h4>
+          <p>info@harmonyclimate.zt.ua</p>
+          <p>support@harmonyclimate.zt.ua</p>
+        </div>
+        <div class="contact-card">
+          <h4>📍 Адреса</h4>
+          <p>вул. Київська, 15</p>
+          <p>Житомир, 10001, Україна</p>
+        </div>
+        <div class="contact-card">
+          <h4>⏰ Час роботи</h4>
+          <p>Пн-Пт: 9:00 - 20:00</p>
+          <p>Сб-Нд: 10:00 - 18:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h3>❓ Часті питання</h3>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Як довго служать кондиціонери?</h4>
+          <p>При правильному обслуговуванні — 10-15 років. Ми пропонуємо розширену гарантію до 7 років для спокійства.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Скільки коштує монтаж?</h4>
+          <p>Залежить від типу системи та складності робіт. Від 2500 до 8000 грн. Розрахунок буде після огляду приміщення.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Вивезете старий кондиціонер?</h4>
+          <p>Так, надаємо послугу демонтажу та утилізації старого обладнання. Вартість залежить від типу системи.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Як довго встановлюється?</h4>
+          <p>Зазвичай 4-8 годин залежно від типу системи та складності робіт. У деяких випадках можемо виконати монтаж в один день.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Яка гарантія на роботи?</h4>
+          <p>2 роки на монтажні роботи. При розширеній гарантії — до 7 років на обладнання та роботи.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Доставляєте по всій Україні?</h4>
+          <p>Так, доставка по всій Україні 1-3 дні.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTATION FORM -->
+    <section class="consultation-section">
+      <h3>📞 Отримати безплатну консультацію</h3>
+      <p>Залиште заявку і наш фахівець зв'яжеться з вами протягом години для підбору оптимальної системи кондиціонування</p>
+
+      <form class="consultation-form" id="consultationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ваше ім'я *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="city">Місто</label>
+            <select id="city" name="city">
+              <option value="">Оберіть місто</option>
+              <option value="zhytomyr">Житомир</option>
+              <option value="berdychiv">Бердичів</option>
+              <option value="korosten">Коростень</option>
+              <option value="novograd">Новоград-Волинський</option>
+              <option value="malyn">Малин</option>
+              <option value="other">Інше місто області</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Повідомлення</label>
+          <textarea id="message" name="message" placeholder="Опишіть ваше приміщення, потреби в охолодженні, бюджет..."></textarea>
+        </div>
+
+        <button type="submit" class="consultation-btn">Надіслати заявку</button>
+      </form>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h3>Готові підібрати кондиціонер?</h3>
+      <p>Перейдіть в каталог або зверніться до нас для консультації.</p>
+      <a href="catalog.html" class="hero-btn">Перейти в каталог</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© Harmony Climate — кондиціонери та кліматичні системи</p>
+      <p style="font-size: 12px; color: #9a9a9a; margin-top: 10px;">
+        Доставка по Житомирській області • Офіційна гарантія • Сертифіковані техніки • Цілодобова підтримка
+      </p>
+    </footer>
+
+  </main>
+
+<script src="js/data.js"></script>
+<script src="js/index.js"></script>
+<script src="js/features.js"></script>
+</body>
+</html>

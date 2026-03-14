@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /catalog.html
+Allow: /services.html
+Allow: /cart.html
+Allow: /checkout.html
+Allow: /index.html
+Disallow: /admin/
+Disallow: /cart.html
+Disallow: /checkout.html
+Disallow: /css/
+Disallow: /js/
+
+Sitemap: https://harmony-climate.com/sitemap.xml
+
+# Crawl-delay in seconds
+Crawl-delay: 1
