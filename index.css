@@ -1,0 +1,983 @@
+/* ================= INDEX PAGE STYLES ================= */
+
+/* Hero секція з покращеним дизайном */
+.hero {
+  background: linear-gradient(135deg, var(--panel) 0%, var(--bg) 100%);
+  padding: 60px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('логотип Harmony Climate.png') center/contain no-repeat;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-btn {
+  background: var(--gold);
+  color: var(--bg);
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.4s ease-out;
+  box-shadow: 0 4px 15px rgba(201, 162, 77, 0.3);
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 162, 77, 0.4);
+}
+
+/* Анімації */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Логотип секція */
+.logo-section {
+  text-align: center;
+  padding: 40px 0;
+  background: var(--panel);
+  margin: 0 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.brand-logo {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(201, 162, 77, 0.3));
+}
+
+/* Галерея з реальними фото */
+.gallery {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.gallery h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.gallery .muted {
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item p {
+  padding: 15px;
+  margin: 0;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Популярні товари */
+.popular-products {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.popular-products h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.popular-products .muted {
+  margin-bottom: 30px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Статистика */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 30px;
+  background: var(--panel);
+  margin: 30px 0;
+  border-radius: 15px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Переваги */
+.benefits {
+  padding: 40px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.benefit {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-3px);
+}
+
+.benefit h3 {
+  color: var(--gold);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.benefit p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Довіреність */
+.trust {
+  padding: 40px 30px;
+  text-align: center;
+  background: var(--panel);
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+.trust h3 {
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.trust p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Сертифікати */
+.certifications {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.certifications h3 {
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.certs-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cert-badge {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 12px 20px;
+  border-radius: 25px;
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cert-badge:hover {
+  background: var(--gold);
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
+/* Географія */
+.coverage {
+  padding: 40px 30px;
+  text-align: center;
+  background: var(--panel);
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+.coverage h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.coverage .muted {
+  margin-bottom: 20px;
+}
+
+.cities-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.city-badge {
+  background: var(--gold);
+  color: var(--bg);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.city-badge:hover {
+  transform: scale(1.05);
+}
+
+/* Відгуки */
+.reviews {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.reviews h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.reviews .muted {
+  margin-bottom: 30px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.review-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stars {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.review-card p {
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.review-card strong {
+  color: var(--gold);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.review-card .muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Процес роботи */
+.how-we-work {
+  padding: 40px 30px;
+  text-align: center;
+  background: var(--panel);
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+.how-we-work h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.step-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--gold);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.step-card h4 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.step-card p {
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.step-connector {
+  display: none;
+}
+
+/* Таблиця порівняння */
+.comparison-section {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.comparison-section h3 {
+  color: var(--gold);
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table th {
+  background: var(--panel);
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.comparison-table td {
+  color: var(--text);
+}
+
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+/* FAQ секція */
+.faq-section {
+  padding: 40px 30px;
+  background: var(--panel);
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+.faq-section h3 {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(201, 162, 77, 0.1);
+}
+
+.faq-question span:first-child {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.faq-icon {
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--bg);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-answer p {
+  padding: 20px;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Блог секція */
+.blog-section {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.blog-section h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.blog-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel);
+  font-size: 3rem;
+  color: var(--gold);
+}
+
+.blog-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-content h4 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.blog-content p {
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.blog-date {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.blog-read-more {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.blog-read-more:hover {
+  color: var(--text);
+}
+
+/* Розсилка */
+.newsletter-section {
+  padding: 40px 30px;
+  text-align: center;
+  background: var(--panel);
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+.newsletter-section h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.newsletter-section p {
+  margin-bottom: 25px;
+  color: var(--text);
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.newsletter-btn {
+  padding: 12px 25px;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(201, 162, 77, 0.3);
+}
+
+/* Послуги */
+.services-preview {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.services-preview h3 {
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.services-preview ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.services-preview li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Контакти */
+.contact-info {
+  padding: 40px 30px;
+  background: var(--panel);
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+.contact-info h3 {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+}
+
+.contact-card h4 {
+  color: var(--gold);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.contact-card p {
+  color: var(--text);
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* Форма консультації */
+.consultation-section {
+  padding: 40px 30px;
+  text-align: center;
+  background: var(--panel);
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+.consultation-section h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.consultation-section p {
+  margin-bottom: 30px;
+  color: var(--text);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.consultation-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text);
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.consultation-btn {
+  padding: 15px 30px;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.consultation-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(201, 162, 77, 0.3);
+}
+
+/* CTA секція */
+.cta {
+  padding: 40px 30px;
+  text-align: center;
+  background: var(--bg);
+  margin: 30px 0;
+  border-radius: 15px;
+  color: var(--text);
+}
+
+.cta h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.cta p {
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* Футер */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+}
+
+.footer p {
+  color: var(--text);
+  margin: 5px 0;
+}
+
+/* Мобільна адаптивність */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    margin-bottom: 20px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .comparison-table {
+    font-size: 0.9rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 10px 5px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Анімації появи */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.benefit,
+.review-card,
+.blog-card,
+.contact-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.benefit.animate-in,
+.review-card.animate-in,
+.blog-card.animate-in,
+.contact-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
